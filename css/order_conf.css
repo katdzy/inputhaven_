@@ -1,0 +1,277 @@
+ /* Headings */
+ h1 {
+    text-align: center;
+    margin: 15px 0 25px;
+    color: #012a57;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #012a57;
+    border-radius: 3px;
+}
+
+h3 {
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e7f1;
+    color: #012a57;
+    font-weight: 500;
+}
+
+/* Thank You Message */
+.thank-you {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(1, 42, 87, 0.9);
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Order Info Section */
+.order-info {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.order-info p {
+    margin: 0;
+    padding: 14px 18px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(1, 42, 87, 0.05);
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.order-info p:hover {
+    transform: translateY(-2px);
+}
+
+.order-info strong {
+    color: #012a57;
+    margin-right: 8px;
+    font-weight: 600;
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Product Pills Styling */
+.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.product-pill {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(1, 42, 87, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-pill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(1, 42, 87, 0.08);
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(1, 42, 87, 0.08);
+    background-color: white;
+    padding: 5px;
+    transition: transform 0.3s;
+}
+
+.product-pill:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.product-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    width: 25%;
+}
+
+.product-price {
+    width: 20%;
+    text-align: center;
+    color: #555;
+}
+
+.product-quantity {
+    width: 15%;
+    text-align: center;
+    background-color: #edf0f5;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #012a57;
+}
+
+.product-subtotal {
+    width: 20%;
+    text-align: right;
+    font-weight: 600;
+    color: #012a57;
+}
+
+.total-container {
+background-color: #f8f9fa;
+padding: 20px 25px;
+border-radius: 10px;
+margin: 25px 0;
+text-align: right;
+box-shadow: 0 4px 10px rgba(1, 42, 87, 0.1);
+border: 1px solid #e0e7f1;
+}
+
+.total-price {
+font-size: 24px;
+font-weight: 700;
+color: #333;
+}
+
+/* Back Button */
+.back-link {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 14px 30px;
+    background-color: #012a57;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(1, 42, 87, 0.15);
+}
+
+.back-link:hover {
+    transform: translateY(-2px);
+    background-color: #023973;
+    box-shadow: 0 6px 12px rgba(1, 42, 87, 0.2);
+}
+
+.back-btn::before {
+    content: "←";
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.back-btn:hover::before {
+    transform: translateX(-3px);
+}
+
+.button-container {
+    text-align: center;
+    padding: 10px 0 5px;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background-color: #edf0f5;
+    color: #012a57;
+    font-weight: 600;
+}
+
+/* Section Headers */
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    margin: 0;
+    border: none;
+    flex-grow: 1;
+}
+
+.section-header:after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #e0e7f1;
+    margin-left: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .order-info {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .order-info strong {
+        min-width: 100px;
+    }
+
+    .product-pill {
+        flex-direction: column;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .product-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .product-details {
+        flex-direction: column;
+        gap: 15px;
+        padding-right: 0;
+    }
+
+    .product-name, .product-price, .product-quantity, .product-subtotal {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-header:after {
+        display: none;
+    }
+}

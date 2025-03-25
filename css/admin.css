@@ -1,0 +1,163 @@
+
+/* Main content */
+h1, h2 {
+    color: #012a57;
+    margin: 20px 5%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #012a57;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 25px 5%;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: #e9ecef;
+    color: #012a57;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+    background-color: #d1d7dd;
+}
+
+.tab-button.active {
+    background-color: #012a57;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    margin: 0 5%;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Cards - Updated to match the image */
+.pill-container {
+    display: flex;
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.pill-container img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 24px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.pill-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.pill-content h3 {
+    color: #191c24;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #dfe3e8;
+    padding-bottom: 8px;
+}
+
+.pill-content .stock-info {
+    color: #191c24;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.pill-content .price {
+    color: #191c24;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.actions {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.edit-icon {
+    color: #012a57;
+}
+
+.edit-icon:hover {
+    background-color: rgba(1, 42, 87, 0.1);
+}
+
+.delete-icon {
+    color: #6c757d;
+}
+
+.delete-icon:hover {
+    background-color: rgba(108, 117, 125, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .tabs {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    
+    .pill-container {
+        max-width: 100%;
+        flex-direction: column;
+    }
+    
+    .pill-container img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    
+    .actions {
+        position: static;
+        margin-top: 16px;
+        justify-content: flex-end;
+    }
+    
+    .navlinks li {
+        padding: 0 10px;
+    }
+}
