@@ -1,0 +1,5 @@
+The admin authorization password is:
+
+"switch"
+
+- Karl

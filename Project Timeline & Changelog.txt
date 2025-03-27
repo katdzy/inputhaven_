@@ -1,0 +1,194 @@
+Project Timeline & Changelog
+Written by Karl Andrei Dungca
+
+Back-end Developers:
+Karl Andrei T. Dungca
+Kurt Juztine S. Mangalino
+
+Front-End Developers:
+Samantha Wayne D. Gonzales
+Antoinette Joyze M. Magat
+
+February 21, 2025
+
+    - Implemented Add to Cart functionality with a dedicated cart view page where users can add and delete items.
+
+    - Created a Cart table in the database to store cart items.
+
+    - Tested adding products using the MariaDB terminal interface.
+
+February 22, 2025
+
+    - Developed an Admin Page with basic CRUD (Create, Read, Update, Delete) operations.
+
+    - The page is accessible only via localhost/shop/admin.php.
+
+February 24, 2025
+
+    - Began structuring the back-end PHP syntax for user authentication and cart functionality.
+
+    - Created a Users table to store account information.
+
+February 26, 2025
+
+    - Implemented role-based login using PHP sessions (admin & client roles).
+
+    - Users can now sign up and select a role.
+
+    - Developed a Checkout Page (not yet linked) with input fields for name, address, shipping courier, and payment method.
+
+    - Added functionality to modify cart item quantities in the cart view page.
+
+    - Created a Products table to replace product-related columns in the Cart table.
+
+February 27, 2025
+
+    - Linked the Checkout Page to the system.
+
+    - Users can now select specific items for checkout.
+
+    - Removed the modify quantity feature from the cart due to a checkout issue where orders weren’t saved in the database.
+
+    - Replaced quantity modification with the ability to select checkout items.
+
+    - Created an Orders table to test checkout functionality.
+
+    - Added stock and description fields to the Products table.
+
+    - Implemented a stock limiter, preventing users from adding more items to the cart than available in stock.
+
+    - The database now consists of four tables: Users, Products, Cart, and Orders.
+
+February 28, 2025
+
+    - Normalized all database tables to 3NF for better efficiency and scalability.
+
+    	Created additional tables:
+
+        	user_addresses (stores multiple addresses per user)
+
+       	 	shipping_couriers (lists available couriers)
+
+        	payment_methods (stores available payment options)
+
+        	order_items (stores products in each order)
+
+    - Optimized bind parameters in MySQLi queries.
+
+    - Checkout now displays purchased items, total price, and shipping fee.
+
+    - Implemented unique order IDs using a combination of strings, time(), and rand(100-999).
+
+    - Added an order_status ENUM column with statuses: Pending, Shipped, Out for Delivery, Delivered, and Cancelled.
+
+    - Created a temporary "Past Orders" page to test successful transactions.
+
+March 1, 2025
+
+    - Developed My Profile Page with:
+
+        Username and password editing (requires old password).
+
+        Saved addresses list.
+
+        Account deletion option.
+
+    - Created My Purchases Page, organizing orders by status via JavaScript.
+
+    - Developed Order Details Page to display order information.
+
+    - Redesigned the Order Confirmation Page for consistency with Purchase Details.
+
+    - Added a category ENUM field in Products with categories: Keyboards, Mouse, Accessories, Miscellaneous.
+
+    - Created dedicated product pages for Keyboards, Mouse, and Accessories.
+
+    - Implemented an "Added to Cart" confirmation message.
+
+    - Added Manage Orders in the admin panel, allowing order status updates.
+
+    - Developed Order Details Page for admins, mirroring the client-side order details view.
+
+March 2, 2025
+
+    - Implemented a basic navbar for client pages.
+
+    - Cart button now updates in real-time to show the number of items.
+
+    - Added a profile icon beside the cart button with hover options: My Profile, My Purchases, and Log Out.
+
+March 3, 2025
+
+    - Back-end completed, transitioning to front-end development.
+
+    - Started creating Figma mockups for UI design.
+
+March 17, 2025
+
+    - Completed Figma mockups.
+
+    - Started CSS development.
+
+March 19, 2025 – Patch Notes
+
+    - Finished CSS styling for Authentication Pages (Login & Signup).
+
+March 20, 2025 – Patch Notes
+
+    - Completed CSS styling for Client Pages.
+
+    - Standardized navy blue and white/off-white color accents across the website.
+
+    - Added password confirmation when deleting an account.
+
+    - Implemented saved addresses selection in checkout to reduce redundancy.
+
+March 22, 2025 – Patch Notes
+
+    - Completed CSS for Admin Pages.
+
+    - Admin header now has an inverted color scheme compared to the client header.
+
+    - Adjusted body padding on the Manage Orders and Order Details pages.
+
+March 23, 2025 – Patch Notes
+
+    - Website hosted online via AWARD SPACE.
+
+    - Added admin authorization password ("switch") when creating a new admin account.
+
+    - Adjusted heading margins on the Add/Edit Product pages.
+
+    - Process.php now creates subfolders for images based on product categories (e.g., uploads/keyboards/keyboard.webp).
+
+    - Fixed a column error affecting the New Arrivals section.
+
+    - Converted images from .png to .webp for faster loading and better compression.
+
+March 25, 2025 – Patch Notes
+
+    - Organized all PHP files into folders, updating links and folder references.
+
+    - Created a reusable connect_db.php for database connections.
+
+    - Added header.php and footer.php for improved reusability.
+
+    - Implemented a favicon.
+
+    - Fixed cart counter bug, ensuring it updates dynamically via JavaScript.
+
+    - Simplified "Added to Cart" messages.
+
+    - Fixed incorrect title tags in the Mouse & Accessories sections.
+
+March 27, 2025 – Stable Release
+
+    - Input Haven v1.0.0 officially released.
+
+    - Hosted version updated for parity with the latest build.
+
+    - Moved index.php from /main/ to the root directory for direct URL access.
+
+    - Favicon placement moved from connect_db.php to header templates for consistency.
+
+    - Fixed image loading issue in index.php by ensuring product images load directly from the /uploads/ folder.
