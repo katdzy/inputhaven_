@@ -4,7 +4,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="path/to/your/styles.css">
 </head>
 <body>
     <footer>
@@ -33,7 +32,6 @@
         </div>
     </footer>
 
-    <!-- Optional: CSS can be moved to a separate stylesheet or placed in <style> tags -->
     <style>
         /* Footer */
         footer {

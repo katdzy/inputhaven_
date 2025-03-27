@@ -33,6 +33,7 @@ if ($cart_count_query) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/key_fav.png">
     <style>
         /* Header and Navigation */
 header {
@@ -153,7 +154,7 @@ header {
 </head>
 <body>
     <header>
-        <a href="../main/index.php">
+        <a href="../index.php">
             <img src="../images/logo.svg" class="logo" alt="logo">
         </a>    
         <nav>

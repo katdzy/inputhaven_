@@ -13,7 +13,7 @@ if (!isset($_SESSION["user_id"]) || !isset($_GET["order_id"])) {
     exit();
 }
 
-$order_id = $_GET["order_id"]; // Keep as string
+$order_id = $_GET["order_id"]; 
 $user_id = $_SESSION["user_id"];
 
 // Fetch order details
@@ -133,7 +133,7 @@ $items_query->close();
     </div>
     
     <div class="button-container">
-        <a class="back-link" href="../main/index.php"> Return to Home</a>
+        <a class="back-link" href="../index.php"> Return to Home</a>
     </div>
 </div>
 </body>

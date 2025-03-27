@@ -104,7 +104,7 @@ $query->close();
         <div class="cart-footer" id="totalAmount">Total Amount: ₱0.00</div>
         <div class="cart-buttons">
             <button type="submit" class="checkout-btn" onclick="return validateCheckout()">Proceed to Checkout</button>
-            <a href="../main/index.php" class="continue-btn">Continue Shopping</a>
+            <a href="../index.php" class="continue-btn">Continue Shopping</a>
         </div>
     </div>
 </div>

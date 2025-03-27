@@ -149,7 +149,7 @@ if ($cart_count_query) {
         <?php endforeach; ?>
 
         <div class="button-container">
-            <a href="../main/index.php" class="back-btn">Back to Shopping</a>
+            <a href="../index.php" class="back-btn">Back to Shopping</a>
         </div>
     </div>
 

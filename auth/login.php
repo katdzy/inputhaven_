@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($row["role"] === "admin") {
                 header("Location: ../admin/admin.php");
             } else {
-                header("Location: ../main/index.php");
+                header("Location: ../index.php");
             }
             exit();
         } else {
@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/key_fav.png">
     <title>Login</title>
     <style>
     </style>

@@ -273,11 +273,11 @@
 
         /* Remove grid from product-showcase */
 .product-showcase {
-    display: none; /* Keep inactive categories hidden */
+    display: none; 
 }
 
 .product-showcase.active {
-    display: block; /* Just make it visible instead of using grid */
+    display: block; 
     width: 100%;
 }
 /* Show only the active category */

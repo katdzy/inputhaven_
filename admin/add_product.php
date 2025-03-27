@@ -71,7 +71,7 @@ if (isset($_SESSION["error_message"])) {
                 <p id="upload-text">Product image preview will appear here</p>
             </div>
             
-            <!-- Important: Use a single form that wraps both sections -->
+           
             <form action="process.php" method="POST" enctype="multipart/form-data">
                 <div class="product-details">
                     <div class="product-description">

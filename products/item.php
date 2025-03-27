@@ -47,7 +47,7 @@ if (isset($_POST['add_to_cart'])) {
                     $update_cart->bind_param("isi", $quantity, $user_id, $product_id);
                     if ($update_cart->execute()) {
                         if ($conn->affected_rows > 0) {
-                            $cart_message = "Added to Cart!"; // Simplified message
+                            $cart_message = "Added to Cart!"; 
                         } else {
                             $cart_message = "No changes made.";
                         }

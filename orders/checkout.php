@@ -123,18 +123,15 @@ if ($address_query) {
         // Show saved addresses with fade-in animation
         savedSection.style.display = "grid";
         newForm.style.display = "none";
-        
-        // Ensure at least one address is selected
+
         const selectedAddress = document.querySelector('.address-card.selected');
         if (!selectedAddress && document.querySelector('.address-card')) {
             selectAddress(document.querySelector('.address-card').getAttribute('id').replace('address-card-', ''));
         }
     } else {
-        // Show new address form with fade-in animation
         savedSection.style.display = "none";
         newForm.style.display = "block";
         
-        // Focus on the first field of the form
         setTimeout(() => {
             document.getElementById('postal_code').focus();
         }, 300);
@@ -142,31 +139,30 @@ if ($address_query) {
 }
 
 function selectAddress(addressId) {
-    // Remove selected class from all address cards
     document.querySelectorAll('.address-card').forEach(card => {
         card.classList.remove('selected');
     });
     
-    // Add selected class to the clicked card with animation
+
     const selectedCard = document.getElementById('address-card-' + addressId);
     selectedCard.classList.add('selected');
     
-    // Apply subtle animation effect
+
     selectedCard.style.transform = 'scale(1.03)';
     setTimeout(() => {
         selectedCard.style.transform = '';
     }, 200);
     
-    // Set the hidden input value
+
     document.getElementById('selected_address_id').value = addressId;
 }
 
-// Initialize form state on load
+
 window.onload = function() {
     toggleAddressForm();
     togglePaymentInput();
     
-    // Add smooth hover effects to address cards
+
     document.querySelectorAll('.address-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             if (!this.classList.contains('selected')) {
@@ -222,7 +218,7 @@ window.onload = function() {
         <input type="text" id="name" name="name" required>
     </div>
 
-    <!-- Address Selection Section - Improved -->
+
     <div class="address-selection full-width">
         <h4 class="shipping-address-title">Shipping Address</h4>
         
@@ -238,7 +234,7 @@ window.onload = function() {
             </div>
         </div>
         
-        <!-- Saved Addresses Section -->
+
         <div id="saved_address_section" class="saved-addresses">
             <?php if (empty($saved_addresses)): ?>
                 <p>You don't have any saved addresses yet.</p>
@@ -253,7 +249,6 @@ window.onload = function() {
             <?php endif; ?>
         </div>
         
-        <!-- New Address Form -->
         <div id="new_address_form" class="new-address-form">
             <div class="form-group">
                 <label for="postal_code">Postal Code:</label>
